@@ -1,0 +1,33 @@
+{
+  "name": "ISBNtoLink",
+  "description": "Convert ISBN number to link",
+  "version": "0.4.1",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://apis.google.com https://api.github.com https://api.crowdin.com https://www.repeatserver.com; object-src 'self'",
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+   "content_scripts": [
+    {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+      "matches": [
+        "http://*/*", 
+        "https://*/*"
+      ],                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      "exclude_matches": [
+        "*://www.bookbyte.com/*"
+      ],
+      "css": ["bootstrap.min.css", "custom.css"],
+      "js": ["jquery.min.js", "bootstrap.min.js", "autoconvertlink.js"]
+    }],
+  "permissions": [
+      "contextMenus",
+      "cookies",
+      "http://*/*", "https://*/*" ,
+      "notifications",
+      "activeTab",
+      "storage",
+      "tabs"
+  ]
+}
